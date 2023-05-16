@@ -6,6 +6,10 @@ body
     width:100%;
     height: auto;
     font-size: 0;
+    background-color: rgba(105,54,245);
+    background-image: url(Pictures/index_body_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .mobPart1 
@@ -15,10 +19,9 @@ body
     width:100%;
     height:auto;
     margin:0;
-    background-color: rgba(105,54,245);
-    background-image: url(Pictures/index_body_bg.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
 }
 
 .mobPart1 .title
@@ -58,20 +61,21 @@ body
     margin:100px auto 0px auto;
 }
 
-.mobPart1 a
+.temp
 {
     display:flex;
-    margin:30px auto 0px auto;
+    margin:10px auto 0px auto;
     text-decoration: none;
     width:285px;
     background-color: white;
     padding:10px 15px 10px 15px;
-    border:1px solid rgba(0, 0, 0, 0.3);
+    border:1px solid rgba(0, 0, 0, 0.5);
     border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    cursor: pointer;
 }
 
-.mobPart1 a img 
+.temp img 
 {
     display: flex;
     width:50px;
@@ -79,7 +83,7 @@ body
     margin:0;
 }
 
-.mobPart1 a div
+.temp div
 {
     display:flex;
     flex-direction: column;
@@ -87,7 +91,7 @@ body
     height: 100%;
 }
 
-.mobPart1 a div p:nth-child(1) , .mobPart1 a div p:nth-child(2)
+.temp div p:nth-child(1) , .temp div p:nth-child(2)
 {
     display:flex;
     font-size: 20px;
@@ -95,7 +99,7 @@ body
     margin:auto auto auto 0px;
 }
 
-.mobPart1 a div p:nth-child(2)
+.temp div p:nth-child(2)
 {
     font-size: 12px;
     color:rgba(0, 0, 0, 0.5);
