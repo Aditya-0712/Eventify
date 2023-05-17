@@ -26,11 +26,11 @@ body
     display:flex;
     flex-direction: column;
     width:340px;
-    height: 400px;
+    height: 450px;
     margin:0px auto 0px auto;
     border-radius: 10px;
     position: relative;
-    bottom:60px;
+    bottom:70px;
     background-color: white;
     box-shadow:rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
@@ -66,8 +66,8 @@ body
 .options img 
 {
     display:flex;
-    width:35px;
-    height:35px;
+    width:40px;
+    height:40px;
     margin:auto 0px auto 0px;
 }
 
@@ -93,25 +93,29 @@ body
     color:rgba(0, 0, 0, 0.3);
 }
 
-.mob_bottom 
+.next 
 {
     display:flex;
-    width:100%;
-    margin:0;
-    position: absolute;
-    bottom: 0;
-    background-color: white;
+    margin:auto 25px 20px auto;
+    background-color:blueviolet;
+    padding:10px 15px 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
 }
 
-.mob_bottom a 
+.next p 
 {
-    text-decoration: none;
-    display: flex;
-    font-size:15px;
-    font-family: poppins-semibold;
-    color:white;
-    background-color: blueviolet;
-    padding: 10px 15px 10px 15px;
-    border-radius: 5px;
-    margin:10px 15px 10px auto;
+    display:flex;
+    font-size: 13px;
+    font-family: poppins-regular;
+    margin:auto 0px auto 0px;
+    color:white
+}
+
+.next svg 
+{
+    display:flex;
+    width:15px;
+    margin:auto 0px auto 10px;
+    fill:white;
 }
