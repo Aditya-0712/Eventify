@@ -35,7 +35,7 @@ body
     box-shadow:rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
-.mob_main .heading , .mob_main .desc
+.heading , .desc
 {
     display:flex;
     font-size:26px;
@@ -44,7 +44,7 @@ body
     margin:20px auto 0px 25px;
 }
 
-.mob_main .desc 
+.desc 
 {
     font-size: 13px;
     color:rgba(0, 0, 0, 0.3);
@@ -100,7 +100,7 @@ body
     background-color:blueviolet;
     padding:10px 15px 10px 15px;
     border-radius: 5px;
-    text-decoration: none;
+    cursor: pointer;
 }
 
 .next p 
@@ -118,4 +118,67 @@ body
     width:15px;
     margin:auto 0px auto 10px;
     fill:white;
+}
+
+.pc_main
+{
+    display:none;
+}
+
+@media screen and (min-width:800px) 
+{
+    .mob_topbar , .mob_main
+    {
+        display:none;
+    }
+
+    .pc_main
+    {
+        display:flex;
+        width:700px;
+        height:430px;
+        margin:60px auto 0px auto;
+        background-color:white;
+        border-radius: 10px;
+        box-shadow:rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    }
+
+    .left 
+    {
+        display:flex;
+        width:200px;
+        margin:10px 0px 10px 10px;
+        background-image: url(Pictures/index_body_bg3.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 0%;
+        border-radius: 10px;
+    }
+
+    .left p 
+    {
+        display:flex;
+        margin:auto;
+        font-size:40px;
+        font-family: poppins-italic-semibold;
+    }
+
+    .right 
+    {
+        display:flex;
+        flex-direction: column;
+        margin:10px;
+    }
+
+    .heading , .desc
+    {
+        margin-top:40px;
+        margin-left: 60px;
+    }
+
+    .desc
+    {
+        margin-top: 0px;
+        font-size: 12px;
+    }
 }
