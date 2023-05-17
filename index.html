@@ -9,30 +9,38 @@
     <body>
     
 <!-- ________________________________Code for Mobile Website starts here_________________________________ -->
-        <div class="mobPart1">
-            <img src="public/Pictures/logo_png.png" alt="logo">
-            <p class="title">Welcome</p>
-            <a href="#" style="margin-top: 50px;">
+        <div class="mob_topbar"></div>
+        <div class="mob_main">
+            <p class="heading">Choose your role</p>
+            <p class="desc">Read the description and choose your<br> role accordingly</p>
+
+            <div class="options" style="margin-top: 40px; background-color:rgba(156,119,248,0.1); border:1px solid rgba(27,27,175)" onclick="selectA()">
                 <img src="public/Pictures/student_logo.png">
                 <div>
-                    <p style="color: #82ACFF;">Student</p>
-                    <p>Browse events and interact.</p>
+                    <p>Student</p>
+                    <p>Browse, register and interact with events.</p>
                 </div>
-            </a>
-            <a href="#">
-                <img src="public/Pictures/admin_logo.png">
-                <div>
-                    <p style="color: #B799FF;">Event Admin</p>
-                    <p>Post events hosted by you.</p>
-                </div>
-            </a>
-            <a href="#" style="margin-bottom: 320px;">
+            </div>
+
+            <div class="options" onclick="selectB()">
                 <img src="public/Pictures/guest_logo.png">
                 <div>
-                    <p style="color:#866EC7;">Guest</p>
-                    <p>Browse and seek info about events.</p>
+                    <p>Guest</p>
+                    <p>Explore freely without login.</p>
                 </div>
-            </a>
+            </div>
+
+            <div class="options" onclick="selectC()">
+                <img src="public/Pictures/admin_logo.png">
+                <div>
+                    <p>Admin</p>
+                    <p>Post and manage events hosted by you.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mob_bottom">
+            <a href="#">Next</a>
         </div>
 <!-- ______________________________Code for Mobile Webiste ends here_______________________________ -->
 
