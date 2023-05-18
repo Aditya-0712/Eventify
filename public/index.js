@@ -47,3 +47,54 @@ function redirect()
         window.location.href = "/admin.html";
     }
 }
+
+
+var pc_optionA = document.querySelectorAll(".pc_options div")[0];
+var pc_optionB = document.querySelectorAll(".pc_options div")[1];
+var pc_optionC = document.querySelectorAll(".pc_options div")[2];
+
+function pc_selectA()
+{
+    pc_optionA.style.backgroundColor = "rgba(156,119,248,0.1)";
+    pc_optionA.style.border = "1px solid rgba(27,27,175)";
+    pc_optionB.style.backgroundColor = "white";
+    pc_optionB.style.border = "1px solid rgba(0,0,0,0.3)";
+    pc_optionC.style.backgroundColor = "white";
+    pc_optionC.style.border = "1px solid rgba(0,0,0,0.3)";
+}
+
+function pc_selectB()
+{
+    pc_optionB.style.backgroundColor = "rgba(156,119,248,0.1)";
+    pc_optionB.style.border = "1px solid rgba(27,27,175)";
+    pc_optionA.style.backgroundColor = "white";
+    pc_optionA.style.border = "1px solid rgba(0,0,0,0.3)";
+    pc_optionC.style.backgroundColor = "white";
+    pc_optionC.style.border = "1px solid rgba(0,0,0,0.3)";
+}
+
+function pc_selectC()
+{
+    pc_optionC.style.backgroundColor = "rgba(156,119,248,0.1)";
+    pc_optionC.style.border = "1px solid rgba(27,27,175)";
+    pc_optionB.style.backgroundColor = "white";
+    pc_optionB.style.border = "1px solid rgba(0,0,0,0.3)";
+    pc_optionA.style.backgroundColor = "white";
+    pc_optionA.style.border = "1px solid rgba(0,0,0,0.3)";
+}
+
+function pc_redirect()
+{
+    if (pc_optionA.style.backgroundColor == "rgba(156, 119, 248, 0.1)")
+    {
+        window.location.href = "/login.html";
+    }
+    else if (pc_optionB.style.backgroundColor == "rgba(156, 119, 248, 0.1)")
+    {
+        window.location.href = "/main_page.html";
+    }
+    else 
+    {
+        window.location.href = "/admin.html";
+    }
+}

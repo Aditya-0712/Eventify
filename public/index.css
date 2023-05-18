@@ -161,6 +161,7 @@ body
         margin:auto;
         font-size:40px;
         font-family: poppins-italic-semibold;
+        color:rgb(18, 18, 148);
     }
 
     .right 
@@ -173,12 +174,86 @@ body
     .heading , .desc
     {
         margin-top:40px;
-        margin-left: 60px;
+        margin-left: 50px;
     }
 
     .desc
     {
         margin-top: 0px;
         font-size: 12px;
+    }
+
+    .pc_options 
+    {
+        display:flex;
+        margin:30px auto 0px 50px;
+    }
+
+    .pc_options div 
+    {
+        display:flex;
+        flex-direction: column;
+        padding:10px;
+        border-radius: 5px;
+        border:1px solid rgba(0, 0, 0, 0.3);
+        margin:0px 10px 0px 0px;
+        cursor: pointer;
+        max-width: 100px;
+    }
+
+    .pc_options div img 
+    {
+        width:45px;
+        height: 45px;
+        margin: 0px auto 0px 0px;
+    }
+
+    .pc_options div p:nth-child(2) , .pc_options div p:nth-child(3)
+    {
+        display: flex;
+        font-size:15px;
+        font-family: poppins-regular;
+        font-weight: bold;
+        color:rgb(18, 18, 148);
+        margin:15px auto 0px 0px;
+    }
+
+    .pc_options div p:nth-child(3)
+    {
+        font-size: 9px;
+        color:rgba(0, 0, 0, 0.3);
+        margin-top: 05px;
+    }
+
+    .pc_next 
+    {
+        display:flex;
+        margin:auto 10px 20px auto;
+        padding:10px 15px 10px 15px;
+        border-radius: 5px;
+        background-color: blueviolet;
+        cursor:pointer;
+    }
+
+    .pc_next:hover 
+    {
+        background-color: rgb(97, 30, 159);
+    }
+
+    .pc_next p 
+    {
+        display:flex;
+        font-size:12px;
+        font-family: poppins-semibold;
+        color:white;
+        margin:0;
+    }
+
+    .pc_next svg
+    {
+        display:flex;
+        width:15px;
+        margin-left: 10px;
+        fill:white;
     }
 }
