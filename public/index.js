@@ -6,30 +6,39 @@ function selectA()
 {
     optionA.style.backgroundColor = "rgba(156,119,248,0.1)";
     optionA.style.border = "1px solid rgba(27,27,175)";
+    optionA.style.animation = "onselect 0.5s ease-out";
     optionB.style.backgroundColor = "white";
     optionB.style.border = "1px solid rgba(0,0,0,0.3)";
+    optionB.style.animation = "none";
     optionC.style.backgroundColor = "white";
     optionC.style.border = "1px solid rgba(0,0,0,0.3)";
+    optionC.style.animation = "none";
 }
 
 function selectB()
 {
     optionB.style.backgroundColor = "rgba(156,119,248,0.1)";
     optionB.style.border = "1px solid rgba(27,27,175)";
+    optionB.style.animation = "onselect 0.5s ease-out";
     optionA.style.backgroundColor = "white";
     optionA.style.border = "1px solid rgba(0,0,0,0.3)";
+    optionA.style.animation = "none";
     optionC.style.backgroundColor = "white";
     optionC.style.border = "1px solid rgba(0,0,0,0.3)";
+    optionC.style.animation = "none";
 }
 
 function selectC()
 {
     optionC.style.backgroundColor = "rgba(156,119,248,0.1)";
     optionC.style.border = "1px solid rgba(27,27,175)";
+    optionC.style.animation = "onselect 0.5s ease-out";
     optionA.style.backgroundColor = "white";
     optionA.style.border = "1px solid rgba(0,0,0,0.3)";
+    optionA.style.animation = "none";
     optionB.style.backgroundColor = "white";
     optionB.style.border = "1px solid rgba(0,0,0,0.3)";
+    optionB.style.animation = "none";
 }
 
 function redirect()
@@ -57,30 +66,39 @@ function pc_selectA()
 {
     pc_optionA.style.backgroundColor = "rgba(156,119,248,0.1)";
     pc_optionA.style.border = "1px solid rgba(27,27,175)";
+    pc_optionA.style.animation = "onselect 0.5s ease-out";
     pc_optionB.style.backgroundColor = "white";
     pc_optionB.style.border = "1px solid rgba(0,0,0,0.3)";
+    pc_optionB.style.animation = "none";
     pc_optionC.style.backgroundColor = "white";
     pc_optionC.style.border = "1px solid rgba(0,0,0,0.3)";
+    pc_optionC.style.animation = "none";
 }
 
 function pc_selectB()
 {
     pc_optionB.style.backgroundColor = "rgba(156,119,248,0.1)";
     pc_optionB.style.border = "1px solid rgba(27,27,175)";
+    pc_optionB.style.animation = "onselect 0.5s ease-out";
     pc_optionA.style.backgroundColor = "white";
     pc_optionA.style.border = "1px solid rgba(0,0,0,0.3)";
+    pc_optionA.style.animation = "none";
     pc_optionC.style.backgroundColor = "white";
     pc_optionC.style.border = "1px solid rgba(0,0,0,0.3)";
+    pc_optionC.style.animation = "none";
 }
 
 function pc_selectC()
 {
     pc_optionC.style.backgroundColor = "rgba(156,119,248,0.1)";
     pc_optionC.style.border = "1px solid rgba(27,27,175)";
+    pc_optionC.style.animation = "onselect 0.5s ease-out";
     pc_optionB.style.backgroundColor = "white";
     pc_optionB.style.border = "1px solid rgba(0,0,0,0.3)";
+    pc_optionB.style.animation = "none";
     pc_optionA.style.backgroundColor = "white";
     pc_optionA.style.border = "1px solid rgba(0,0,0,0.3)";
+    pc_optionA.style.animation = "none";
 }
 
 function pc_redirect()
