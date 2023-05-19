@@ -1,3 +1,5 @@
+*{-webkit-tap-highlight-color: transparent !important;}
+
 body 
 {
     display:flex;
@@ -123,7 +125,7 @@ body
 
 @keyframes onselect 
 {
-    0% {background-color: rgba(156,119,248,0.1); opacity: 0.5;}
+    0% {background-color: white; opacity: 0;}
     100% {background-color: rgba(156,119,248,0.1); opacity: 1;}    
 }
 
