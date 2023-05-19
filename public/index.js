@@ -45,7 +45,7 @@ function redirect()
 {
     if (optionA.style.backgroundColor == "rgba(156, 119, 248, 0.1)")
     {
-        window.location.href = "/login.html";
+        window.location.href = "login.html";
     }
     else if (optionB.style.backgroundColor == "rgba(156, 119, 248, 0.1)")
     {

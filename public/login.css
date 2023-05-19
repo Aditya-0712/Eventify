@@ -1,0 +1,140 @@
+*{-webkit-tap-highlight-color: transparent;}
+
+body 
+{
+    display:flex;
+    flex-direction: column;
+    margin:0;
+    width: 100%;
+    background-color: #edf4fe;
+    font-size: 0;
+}
+
+.mob_topbar
+{
+    display:flex;
+    width:100%;
+    height:200px;
+    margin:0;
+    background-image: url(Pictures/index_body_bg2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 10% 0%;
+}
+
+.mob_main 
+{
+    display:flex;
+    flex-direction: column;
+    width:340px;
+    height: 450px;
+    margin:0px auto 0px auto;
+    border-radius: 10px;
+    position: relative;
+    bottom:70px;
+    background-color: white;
+    box-shadow:rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.heading , .desc
+{
+    display:flex;
+    font-size:26px;
+    font-family: poppins-semibold;
+    color:black;
+    margin:20px auto 0px 25px;
+}
+
+.desc 
+{
+    font-size: 13px;
+    color:rgba(0, 0, 0, 0.3);
+    font-family: poppins-regular;
+    margin-top: 0;
+}
+
+.prev_next 
+{
+    display:flex;
+    width:100%;
+    margin:auto 0px 0px 0px;
+}
+
+.prev_next div:nth-child(1) , .prev_next div:nth-child(2)
+{
+    display:flex;
+    padding:10px 15px 10px 15px;
+    border-radius: 5px;
+    margin:0px auto 20px 25px;
+    background-color: rgba(27,27,175);
+    cursor: pointer;
+}
+
+.prev_next div:nth-child(2)
+{
+    margin:0px 25px 20px auto;
+    background-color: blueviolet;
+}
+
+.prev_next div p 
+{
+    display:flex;
+    margin:auto 0px auto 0px;
+    font-size:13px;
+    font-family: poppins-regular;
+    color:white;
+}
+
+.prev_next div svg 
+{
+    display:flex;
+    width:15px;
+    margin:0;
+    fill:white;
+}
+
+.prev_next div svg:nth-child(2)
+{
+    margin-left: 10px;
+}
+
+.mob_form 
+{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    margin:10px 0px 0px 0px;
+}
+
+.label 
+{
+    display: flex;
+    font-size: 13px;
+    font-family: poppins-semibold;
+    color: rgb(18, 18, 148);
+    margin: 20px auto 0px 25px;
+}
+
+.mob_form input 
+{
+    display: flex;
+    width: 270px;
+    padding-left: 15px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 5px auto 0px 25px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    font-family: poppins-regular;
+    color: #022959;
+}
+
+.mob_form input:focus 
+{
+    outline:1px solid blueviolet;
+}
+
+.mob_form input::placeholder
+{
+    color:rgba(0, 0, 0, 0.3);
+    font-size: 11px;
+}
