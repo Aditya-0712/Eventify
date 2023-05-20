@@ -104,6 +104,7 @@ body
     padding:10px 15px 10px 15px;
     border-radius: 5px;
     cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(137, 43, 226, 0.4), 0 6px 20px 0 rgba(137, 43, 226, 0.4);
 }
 
 .next p 
@@ -126,7 +127,7 @@ body
 @keyframes onselect 
 {
     0% {background-color: white; border:1px solid rgba(0,0,0,0.3); box-shadow: none}
-    100% {background-color: rgba(156,119,248,0.1); border:1px solid rgba(27,27,175); box-shadow: 0 4px 8px 0 rgba(137, 43, 226, 0.2), 0 6px 20px 0 rgba(137, 43, 226, 0.2)}    
+    100% {background-color: rgba(156,119,248,0.1); border:1px solid rgba(27,27,175); box-shadow: 0 4px 8px 0 rgba(137, 43, 226, 0.1), 0 6px 20px 0 rgba(137, 43, 226, 0.1)}    
 }
 
 .pc_main
