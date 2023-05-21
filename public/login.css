@@ -70,10 +70,20 @@ body
     cursor: pointer;
 }
 
+.prev_next div:nth-child(1):hover 
+{
+    background-color: rgb(15, 15, 125);
+}
+
 .prev_next div:nth-child(2)
 {
     margin:0px 25px 20px auto;
     background-color: blueviolet;
+}
+
+.prev_next div:nth-child(2):hover 
+{
+    background-color: rgb(97, 30, 159);
 }
 
 .prev_next div p 
@@ -137,4 +147,15 @@ body
 {
     color:rgba(0, 0, 0, 0.3);
     font-size: 11px;
+}
+
+.mob_form svg 
+{
+    display:flex;
+    height: 17px;
+    margin:0px 35px 0px auto;
+    position: relative;
+    bottom:25px;
+    cursor: pointer;
+    fill:rgb(0, 7, 111);
 }
