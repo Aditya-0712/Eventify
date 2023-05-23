@@ -108,7 +108,7 @@ body
     margin-left: 10px;
 }
 
-.mob_form 
+.mob_form , .pc_form
 {
     display: flex;
     flex-direction: column;
@@ -125,7 +125,7 @@ body
     margin: 20px auto 0px 25px;
 }
 
-.mob_form input 
+.mob_form input , .pc_form input
 {
     display: flex;
     width: 270px;
@@ -138,18 +138,18 @@ body
     color: #022959;
 }
 
-.mob_form input:focus 
+.mob_form input:focus , .pc_form input:focus
 {
     outline:1px solid blueviolet;
 }
 
-.mob_form input::placeholder
+.mob_form input::placeholder , .pc_form input::placeholder
 {
     color:rgba(0, 0, 0, 0.3);
     font-size: 11px;
 }
 
-.mob_form svg 
+.mob_form svg  , .pc_form svg
 {
     display:flex;
     height: 17px;
@@ -158,4 +158,102 @@ body
     bottom:25px;
     cursor: pointer;
     fill:rgb(0, 7, 111);
+}
+
+.reg 
+{
+    display:flex;
+    margin:10px auto 0px auto;
+    font-size:12px;
+    font-family:poppins-regular;
+    color:black;
+}
+
+.reg a 
+{
+    display:flex;
+    margin:0px 0px 0px 5px;
+    text-decoration: underline;
+    color:blue;
+}
+
+@media screen and (min-width:830px)
+{
+    .mob_topbar , .mob_main 
+    {
+        display:none;
+    }
+
+    .pc_main
+    {
+        display:flex;
+        width:700px;
+        height:430px;
+        margin:60px auto 0px auto;
+        background-color:white;
+        border-radius: 10px;
+        box-shadow:rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    }
+
+    .left 
+    {
+        display:flex;
+        width:200px;
+        margin:10px 0px 10px 10px;
+        background-image: url(Pictures/index_body_bg3.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 0%;
+        border-radius: 10px;
+    }
+
+    .left p 
+    {
+        display:flex;
+        margin:auto;
+        font-size:40px;
+        font-family: poppins-italic-semibold;
+        color:rgb(18, 18, 148);
+    }
+
+    .right 
+    {
+        display:flex;
+        flex-direction: column;
+        margin:10px;
+        width:470px;
+    }
+
+    .heading , .desc
+    {
+        margin-top:40px;
+        margin-left: 50px;
+    }
+
+    .desc
+    {
+        margin-top: 0px;
+        font-size: 12px;
+    }
+
+    .pc_form 
+    {
+        margin-left: 60px;
+        margin-top: 20px;
+    }
+
+    .pc_form svg 
+    {
+        margin-right: 165px;
+    }
+
+    .reg 
+    {
+        margin-left:65px;
+    }
+
+    .prev_next div:nth-child(1)
+    {
+        margin-left: 40px;
+    }
 }
