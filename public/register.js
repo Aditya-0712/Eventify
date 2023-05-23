@@ -55,6 +55,7 @@ prev1.onclick = function()
 var mob_username = document.forms["mob_form"]["username"];
 var error = document.getElementsByClassName("error");
 var mob_email = document.forms["mob_form"]["email"];
+var regPattern = new RegExp('@gmail.com');
 
 function mob_submit()
 {
@@ -71,6 +72,14 @@ function mob_submit()
 
     if (mob_pass.value == '')
     {
+        error[2].innerHTML = "This field is required";
+        error[2].style.display = "flex";
+        mob_pass.style.borderColor = "red";
+        mob_eye.style.bottom = "40px";
+    }
+    else if (mob_pass.value.length<9)
+    {
+        error[2].innerHTML = "Must be atleast 8 characters";
         error[2].style.display = "flex";
         mob_pass.style.borderColor = "red";
         mob_eye.style.bottom = "40px";
@@ -84,6 +93,13 @@ function mob_submit()
 
     if (mob_email.value == '')
     {
+        error[4].innerHTML = "This field is required"
+        error[1].style.display = "flex";
+        mob_email.style.borderColor = "red";
+    }
+    else if (!regPattern.test(mob_email.value))
+    {
+        error[1].innerHTML = "Invalid Email-Id"
         error[1].style.display = "flex";
         mob_email.style.borderColor = "red";
     }
@@ -116,6 +132,15 @@ function pc_submit()
 
     if (pc_pass.value == '')
     {
+        error[5].innerHTML = "This field is required";
+        error[5].style.display = "flex";
+        pc_pass.style.borderColor = "red";
+        pc_eye.style.bottom = "40px";
+        adjust++;
+    }
+    else if (pc_pass.value.length<9)
+    {
+        error[5].innerHTML = "Must be atleast 8 characters";
         error[5].style.display = "flex";
         pc_pass.style.borderColor = "red";
         pc_eye.style.bottom = "40px";
@@ -130,8 +155,16 @@ function pc_submit()
 
     if (pc_email.value == '')
     {
+        error[4].innerHTML = "This field is required"
         error[4].style.display = "flex";
         pc_email.style.borderColor = "red";
+        adjust++;
+    }
+    else if (!regPattern.test(pc_email.value))
+    {
+        error[4].innerHTML = "Invalid Email-Id"
+        error[4].style.display = "flex";
+        mob_email.style.borderColor = "red";
         adjust++;
     }
     else 
