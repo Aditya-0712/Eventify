@@ -180,6 +180,15 @@ body
     color:blue;
 }
 
+.error 
+{
+    display: none;
+    font-size:10px;
+    color:red;
+    font-family: poppins-italic-light;
+    margin: 0px auto 0px 25px;
+}
+
 @media screen and (min-width:830px)
 {
     .mob_topbar , .mob_main 
@@ -242,7 +251,7 @@ body
     .pc_form 
     {
         margin-left: 60px;
-        margin-top: 20px;
+        margin-top: 10px;
     }
 
     .pc_form svg 
@@ -253,6 +262,7 @@ body
     .reg 
     {
         margin-left:65px;
+        margin-top: 0;
     }
 
     .prev_next div:nth-child(1)

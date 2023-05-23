@@ -51,3 +51,63 @@ prev1.onclick = function()
 {
     window.location.href = "index.html";
 }
+
+var mob_username = document.forms["mob_form"]["name/email"];
+var error = document.getElementsByClassName("error");
+
+function mob_submit()
+{
+    if (mob_username.value == '')
+    {
+        error[0].style.display = "flex";
+        mob_username.style.borderColor = "red";
+    }
+    else 
+    {
+        error[0].style.display = "none";
+        mob_username.style.borderColor = "rgba(0, 0, 0, 0.15)";
+    }
+
+    if (mob_pass.value == '')
+    {
+        error[1].style.display = "flex";
+        mob_pass.style.borderColor = "red";
+        mob_eye.style.bottom = "40px";
+    }
+    else 
+    {
+        error[1].style.display = "none";
+        mob_pass.style.borderColor = "rgba(0, 0, 0, 0.15)";
+        mob_eye.style.bottom = "25px";
+    }
+}
+
+
+var pc_username = document.forms["pc_form"]["name/email"];
+
+function pc_submit()
+{
+    if (pc_username.value == '')
+    {
+        error[2].style.display = "flex";
+        pc_username.style.borderColor = "red";
+    }
+    else 
+    {
+        error[2].style.display = "none";
+        pc_username.style.borderColor = "rgba(0, 0, 0, 0.15)";
+    }
+
+    if (pc_pass.value == '')
+    {
+        error[3].style.display = "flex";
+        pc_pass.style.borderColor = "red";
+        pc_eye.style.bottom = "40px";
+    }
+    else 
+    {
+        error[3].style.display = "none";
+        pc_pass.style.borderColor = "rgba(0, 0, 0, 0.15)";
+        pc_eye.style.bottom = "25px";
+    }
+}
