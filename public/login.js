@@ -57,6 +57,9 @@ var error = document.getElementsByClassName("error");
 
 function mob_submit()
 {
+    var fleg1,fleg2;
+    fleg1 = fleg2 = 0;
+
     if (mob_username.value == '')
     {
         error[0].style.display = "flex";
@@ -66,6 +69,7 @@ function mob_submit()
     {
         error[0].style.display = "none";
         mob_username.style.borderColor = "rgba(0, 0, 0, 0.15)";
+        fleg1 = 1;
     }
 
     if (mob_pass.value == '')
@@ -79,6 +83,23 @@ function mob_submit()
         error[1].style.display = "none";
         mob_pass.style.borderColor = "rgba(0, 0, 0, 0.15)";
         mob_eye.style.bottom = "25px";
+        fleg2 = 1;
+    }
+
+
+    if(fleg1==1 && fleg2==1)
+    {
+        fetch("/check" , {
+            method:'POST',
+            headers:{
+                'Accept':'Application/json',
+                'Content-Type':'Application/json'
+            },
+            body:JSON.stringify({log_name:mob_username.value , log_pass:mob_pass.value})
+        })
+        .then(response => response.json())
+
+        window.location.href="/check";
     }
 }
 
@@ -87,6 +108,9 @@ var pc_username = document.forms["pc_form"]["name/email"];
 
 function pc_submit()
 {
+    var flag1,flag2;
+    flag1=flag2=0;
+
     if (pc_username.value == '')
     {
         error[2].style.display = "flex";
@@ -96,6 +120,7 @@ function pc_submit()
     {
         error[2].style.display = "none";
         pc_username.style.borderColor = "rgba(0, 0, 0, 0.15)";
+        flag1=1;
     }
 
     if (pc_pass.value == '')
@@ -109,5 +134,22 @@ function pc_submit()
         error[3].style.display = "none";
         pc_pass.style.borderColor = "rgba(0, 0, 0, 0.15)";
         pc_eye.style.bottom = "25px";
+        flag2=1;
+    }
+
+
+    if(flag1==1 && flag2==1)
+    {
+        fetch("/check" , {
+            method:'POST',
+            headers:{
+                'Accept':'Application/json',
+                'Content-Type':'Application/json'
+            },
+            body:JSON.stringify({log_name:pc_username.value , log_pass:pc_pass.value})
+        })
+        .then(response => response.json())
+
+        window.location.href="/check";
     }
 }

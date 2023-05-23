@@ -59,6 +59,11 @@ var regPattern = new RegExp('@gmail.com');
 
 function mob_submit()
 {
+    var fleg1,fleg2,fleg3;
+    fleg1=0;
+    fleg2=0;
+    fleg3=0;
+
     if (mob_username.value == '')
     {
         error[0].style.display = "flex";
@@ -68,6 +73,7 @@ function mob_submit()
     {
         error[0].style.display = "none";
         mob_username.style.borderColor = "rgba(0, 0, 0, 0.15)";
+        fleg1=1;
     }
 
     if (mob_pass.value == '')
@@ -77,7 +83,7 @@ function mob_submit()
         mob_pass.style.borderColor = "red";
         mob_eye.style.bottom = "40px";
     }
-    else if (mob_pass.value.length<9)
+    else if (mob_pass.value.length<8)
     {
         error[2].innerHTML = "Must be atleast 8 characters";
         error[2].style.display = "flex";
@@ -89,6 +95,7 @@ function mob_submit()
         error[2].style.display = "none";
         mob_pass.style.borderColor = "rgba(0, 0, 0, 0.15)";
         mob_eye.style.bottom = "25px";
+        fleg2=1;
     }
 
     if (mob_email.value == '')
@@ -107,6 +114,23 @@ function mob_submit()
     {
         error[1].style.display = "none";
         mob_email.style.borderColor = "rgba(0, 0, 0, 0.15)";
+        fleg3=1;
+    }
+
+
+    if (fleg1==1 && fleg2==1 && fleg3==1)
+    {
+        fetch("/main_page.html" , {
+            method:'POST' , 
+            headers:{
+                'Accept':'Application/json',
+                'Content-Type':'Application/json'
+            },
+            body:JSON.stringify({NAME:mob_username.value , EMAIL:mob_email.value , PASSWORD:mob_pass.value})
+        })
+        .then(response => response.json());
+
+        window.location.href = "/main_page.html";
     }
 }
 
@@ -143,7 +167,7 @@ function pc_submit()
         pc_eye.style.bottom = "40px";
         adjust++;
     }
-    else if (pc_pass.value.length<9)
+    else if (pc_pass.value.length<8)
     {
         error[5].innerHTML = "Must be atleast 8 characters";
         error[5].style.display = "flex";
