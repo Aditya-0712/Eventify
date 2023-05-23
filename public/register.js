@@ -117,6 +117,10 @@ var pc_email = document.forms["pc_form"]["email"];
 function pc_submit()
 {
     var adjust=0;
+    var flag1, flag2, flag3;
+    flag1 = 0;
+    flag2 = 0;
+    flag3 = 0;
 
     if (pc_username.value == '')
     {
@@ -128,6 +132,7 @@ function pc_submit()
     {
         error[3].style.display = "none";
         pc_username.style.borderColor = "rgba(0, 0, 0, 0.15)";
+        flag1=1;
     }
 
     if (pc_pass.value == '')
@@ -151,6 +156,7 @@ function pc_submit()
         error[5].style.display = "none";
         pc_pass.style.borderColor = "rgba(0, 0, 0, 0.15)";
         pc_eye.style.bottom = "25px";
+        flag2=1;
     }
 
     if (pc_email.value == '')
@@ -171,6 +177,7 @@ function pc_submit()
     {
         error[4].style.display = "none";
         pc_email.style.borderColor = "rgba(0, 0, 0, 0.15)";
+        flag3 = 1;
     }
 
     if (adjust>1)
@@ -180,5 +187,21 @@ function pc_submit()
     else 
     {
         document.getElementsByClassName("reg")[1].style.bottom = "0px"; 
+    }
+
+
+    if (flag1 == 1 && flag2 == 1 && flag3 == 1)
+    {
+        fetch("/main_page.html" , {
+            method:"POST",
+            headers:{
+                'Accept':'Application/json',
+                'Content-Type':'Application/json'
+            },
+            body: JSON.stringify({NAME:pc_username.value , EMAIL:pc_email.value , PASSWORD:pc_pass.value})
+        })
+        .then(response => response.json());
+
+        window.location.href = "/main_page.html";
     }
 }
