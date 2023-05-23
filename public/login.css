@@ -189,6 +189,11 @@ body
     margin: 0px auto 0px 25px;
 }
 
+.pc_main
+{
+    display:none;
+}
+
 @media screen and (min-width:830px)
 {
     .mob_topbar , .mob_main 
