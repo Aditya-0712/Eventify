@@ -123,14 +123,14 @@ function pc_redirect()
 {
     if (pc_optionA.style.backgroundColor == "rgba(156, 119, 248, 0.1)")
     {
-        window.location.href = "/login.html";
+        window.location.href = "login.html";
     }
     else if (pc_optionB.style.backgroundColor == "rgba(156, 119, 248, 0.1)")
     {
-        window.location.href = "/main_page.html";
+        window.location.href = "main_page.html";
     }
     else 
     {
-        window.location.href = "/admin.html";
+        window.location.href = "admin.html";
     }
 }
