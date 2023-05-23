@@ -90,8 +90,8 @@ body
 {
     display:flex;
     margin:auto 0px auto 0px;
-    font-size:13px;
-    font-family: poppins-regular;
+    font-size:11px;
+    font-family: poppins-semibold;
     color:white;
 }
 
@@ -136,11 +136,14 @@ body
     border: 1px solid rgba(0, 0, 0, 0.15);
     font-family: poppins-regular;
     color: #022959;
+    transition: 0.5s;
 }
 
 .mob_form input:focus , .pc_form input:focus
 {
     outline:1px solid blueviolet;
+    box-shadow:0 4px 8px 0 rgba(137, 43, 226, 0.1), 0 6px 20px 0 rgba(137, 43, 226, 0.1);
+    transition: 0.5s;
 }
 
 .mob_form input::placeholder , .pc_form input::placeholder
@@ -226,7 +229,7 @@ body
 
     .heading , .desc
     {
-        margin-top:40px;
+        margin-top:30px;
         margin-left: 50px;
     }
 
