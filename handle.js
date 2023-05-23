@@ -5,8 +5,10 @@ const path = require("path");
 const cheerio = require("cheerio");
 const fs = require("fs");
 const mongoose = require("mongoose");
+const hostname = 'localhost';
+const port = 3000;
 
-mongoose.connect("mongodb://127.0.0.1:27017/Eventify", {useNewUrlParser:true});
+mongoose.connect("mongodb+srv://AdityaBatgeri:Kiq2w2Ak7CR9bYgb@cluster0.d42f6ow.mongodb.net/Eventify?retryWrites=true&w=majority", {useNewUrlParser:true});
 
 var username,email,password;
 var $ = cheerio.load(fs.readFileSync(__dirname + "/main_page.html"));
@@ -108,4 +110,6 @@ app.get("/check" , function(req,res)
     }
 })
 
-app.listen(3000);
+app.listen(port, hostname, () => {
+    console.log(`Server running at http://${hostname}:${port}/`);
+  });
