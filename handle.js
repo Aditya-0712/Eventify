@@ -1,6 +1,4 @@
 const exp = require("express");
-const session = require("express-session");
-const cookieParser = require("cookie-parser");
 const app = exp();
 const BP = require("body-parser");
 const path = require("path");
@@ -11,7 +9,6 @@ const hostname = 'localhost';
 const port = 3000;
 
 mongoose.connect("mongodb+srv://AdityaBatgeri:Kiq2w2Ak7CR9bYgb@cluster0.d42f6ow.mongodb.net/Eventify?retryWrites=true&w=majority", {useNewUrlParser:true});
-// mongoose.connect("mongodb://127.0.0.1:27017/Eventify", {useNewUrlParser:true});
 
 var username,email,password;
 var $ = cheerio.load(fs.readFileSync(__dirname + "/main_page.html"));
@@ -20,11 +17,6 @@ var er = cheerio.load(fs.readFileSync(__dirname + "/login.html"));
 app.use(BP.json());
 app.use(BP.urlencoded({extended:true}));
 app.use(exp.static(path.join("public")));
-app.use(session({
-    secret: "Aditya",
-    saveUninitialized: true,
-    resave: true
-}));
 
 
 const struc1 = new mongoose.Schema({
@@ -37,53 +29,21 @@ const Registration = mongoose.model("registrations", struc1);
 
 app.get("/" , function(req,res)
 {
-    if (req.session.view)
-    {
-        req.session.view++;
-    }
-    else
-    {
-        req.session.view = 1;
-    }
     res.sendFile(__dirname + "/index.html");
 })
 
 app.get("/index.html" , function(req,res)
 {
-    if (req.session.view)
-    {
-        req.session.view++;
-    }
-    else
-    {
-        req.session.view = 1;
-    }
     res.sendFile(__dirname + "/index.html");
 })
 
 app.get("/login.html" , function(req,res)
 {
-    if (req.session.view)
-    {
-        req.session.view++;
-    }
-    else
-    {
-        req.session.view = 1;
-    }
     res.sendFile(__dirname + "/login.html");
 })
 
 app.get("/register.html" , function(req,res)
 {
-    if (req.session.view)
-    {
-        req.session.view++;
-    }
-    else
-    {
-        req.session.view = 1;
-    }
     res.sendFile(__dirname + "/register.html");
 })
 
@@ -99,15 +59,6 @@ app.post("/main_page.html" , function(req,res)
 
 app.get("/main_page.html" , function(req,res)
 {
-    if (req.session.view)
-    {
-        req.session.view++;
-    }
-    else
-    {
-        req.session.view = 1;
-    }
-
     $("#uuuu").html("Username :- " + username);
     $("#eeee").html("Email :- " + email);
     $("#pppp").html("Password :- " + password);
@@ -139,15 +90,6 @@ app.post("/check" , async function(req,res)
 
 app.get("/check" , function(req,res)
 {
-    if (req.session.view)
-    {
-        req.session.view++;
-    }
-    else
-    {
-        req.session.view = 1;
-    }
-
     if (present==1)
     {
         $("#uuuu").html("Username :- " + log_username);
