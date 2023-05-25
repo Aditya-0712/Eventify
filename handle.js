@@ -41,15 +41,7 @@ const Registration = mongoose.model("registrations", struc1);
 
 app.get("/" , function(req,res)
 {
-    sess=req.session;
-    if(sess.userID)
-    {
-        res.redirect("/check");
-    }
-    else 
-    {
-        res.sendFile(__dirname + "/index.html");
-    }
+    res.sendFile(__dirname + "/index.html");
 })
 
 app.get("/index.html" , function(req,res)
