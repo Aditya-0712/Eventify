@@ -7,16 +7,28 @@ const fs = require("fs");
 const mongoose = require("mongoose");
 const hostname = 'localhost';
 const port = 3000;
+const sessions = require("express-session");
+const cookieParser = require("cookie-parser");
 
 mongoose.connect("mongodb+srv://AdityaBatgeri:Kiq2w2Ak7CR9bYgb@cluster0.d42f6ow.mongodb.net/Eventify?retryWrites=true&w=majority", {useNewUrlParser:true});
 
-var username,email,password;
+var username,email,password,sess;
 var $ = cheerio.load(fs.readFileSync(__dirname + "/main_page.html"));
 var er = cheerio.load(fs.readFileSync(__dirname + "/login.html"));
 
 app.use(BP.json());
 app.use(BP.urlencoded({extended:true}));
 app.use(exp.static(path.join("public")));
+
+var oneDay = 1000 * 60 * 60 * 24;
+app.use(sessions({
+    secret:"aditya",
+    saveUninitialized:true,
+    resave:false,
+    cookie:{maxAge:oneDay}
+}));
+
+app.use(cookieParser());
 
 
 const struc1 = new mongoose.Schema({
@@ -29,7 +41,15 @@ const Registration = mongoose.model("registrations", struc1);
 
 app.get("/" , function(req,res)
 {
-    res.sendFile(__dirname + "/index.html");
+    sess=req.session;
+    if(sess.userID)
+    {
+        res.redirect("/check");
+    }
+    else 
+    {
+        res.sendFile(__dirname + "/index.html");
+    }
 })
 
 app.get("/index.html" , function(req,res)
@@ -94,9 +114,13 @@ app.get("/check" , function(req,res)
 {
     if (present==1)
     {
-        $("#uuuu").html("Username :- " + log_username);
-        $("#eeee").html("Email :- " + log_emailid);
-        $("#pppp").html("Password :- " + log_password);
+        sess=req.session;
+        sess.userID = log_username;
+        sess.email = log_emailid;
+        sess.pass = log_password;
+        $("#uuuu").html("Username :- " + sess.userID);
+        $("#eeee").html("Email :- " + sess.email);
+        $("#pppp").html("Password :- " + sess.pass);
         $("#temp").html("Succesfully Logged in !!");
 
         res.send($.html());
@@ -112,6 +136,13 @@ app.get("/check" , function(req,res)
     }
 
     console.log(present);
+    present=0;
+})
+
+app.get("/logout" , function(req,res)
+{
+    req.session.destroy();
+    res.redirect("/")
 })
 
 app.listen(port, hostname, () => {
