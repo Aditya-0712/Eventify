@@ -86,6 +86,8 @@ app.post("/check" , async function(req,res)
             }
         }
     }
+
+    res.send("/check");
 })
 
 app.get("/check" , function(req,res)
@@ -108,6 +110,8 @@ app.get("/check" , function(req,res)
 
         res.send(er.html());
     }
+
+    console.log(present);
 })
 
 app.listen(port, hostname, () => {

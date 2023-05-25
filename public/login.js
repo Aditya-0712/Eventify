@@ -97,9 +97,8 @@ function mob_submit()
             },
             body:JSON.stringify({log_name:mob_username.value , log_pass:mob_pass.value})
         })
-        .then(response => response.json())
-
-        window.location.href="/check";
+        .then(response => response.text())
+        .then(data => window.location.href = data);
     }
 }
 
@@ -148,8 +147,7 @@ function pc_submit()
             },
             body:JSON.stringify({log_name:pc_username.value , log_pass:pc_pass.value})
         })
-        .then(response => response.json())
-
-        window.location.href="/check";
+        .then(response => response.text())
+        .then(data => window.location.href = data);
     }
 }
