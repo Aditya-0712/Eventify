@@ -13,7 +13,7 @@ body
     display:flex;
     width:100%;
     margin:0;
-    padding: 20px 0px 0px 0px;
+    padding: 30px 0px 0px 0px;
 }
 
 .input-container 
@@ -139,7 +139,7 @@ body
     display:flex;
     flex-direction: column;
     width: 100%;
-    margin:40px 0px 0px 0px;
+    margin:30px 0px 0px 0px;
 }
 
 .title
@@ -187,6 +187,91 @@ body
     display:flex;
     font-size:15px;
     font-family: poppins-regular;
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.3);
     margin:0px auto 0px 25px;
+    position: relative;
+    bottom: 7px;
+}
+
+.trending 
+{
+    display:flex;
+    width:100%;
+    overflow-x: scroll;
+    margin:30px 0px 0px 0px; 
+}
+
+.heading
+{
+    display:flex;
+    width: 100%;
+    margin:20px 0px 0px 0px;
+}
+
+.heading p 
+{
+    display:flex;
+    font-size:18px;
+    font-family: poppins-semibold;
+    color:blueviolet;
+    margin:auto auto auto 25px;
+}
+
+.heading svg 
+{
+    display:flex;
+    width:30px;
+    margin:auto 15px auto auto;
+    fill:blueviolet;
+}
+
+.event-title , .event-desc
+{
+    display:flex;
+    font-size: 17px;
+    font-family: poppins-semibold;
+    color:white;
+    margin:0px auto 0px 25px;
+    position: relative;
+    bottom:60px;
+}
+
+.event-desc
+{
+    color:rgba(255, 255, 255, 0.3);
+    font-size: 12px;
+    font-family: poppins-regular;
+}
+
+.trending .mob_post 
+{
+    display:flex;
+    flex-direction: column;
+    margin:0px 15px 0px 15px;
+}
+
+.mob_post img 
+{
+    width:250px;
+    height:300px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.mob_post div 
+{
+    display:flex;
+    width:100%;
+    margin:5px 0px 0px 0px;
+    position: relative;
+    bottom: 40px;
+}
+
+.mob_post div svg 
+{
+    width:30px;
+    height:30px;
+    background-color: white;
+    margin:auto;
+    cursor: pointer;
 }
