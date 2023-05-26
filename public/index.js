@@ -58,7 +58,7 @@ function redirect()
     }
     else if (optionB.style.backgroundColor == "rgba(156, 119, 248, 0.1)")
     {
-        window.location.href = "/main_page.html";
+        window.location.href = "/guest";
     }
     else 
     {
@@ -127,7 +127,7 @@ function pc_redirect()
     }
     else if (pc_optionB.style.backgroundColor == "rgba(156, 119, 248, 0.1)")
     {
-        window.location.href = "main_page.html";
+        window.location.href = "/guest";
     }
     else 
     {

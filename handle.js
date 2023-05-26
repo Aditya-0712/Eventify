@@ -71,10 +71,7 @@ app.post("/main_page.html" , function(req,res)
 
 app.get("/main_page.html" , function(req,res)
 {
-    $("#uuuu").html("Username :- " + username);
-    $("#eeee").html("Email :- " + email);
-    $("#pppp").html("Password :- " + password);
-    $("#temp").html("Your Account was registered.");
+    $("#cred_user").html(username + ".");
 
     res.send($.html());
 })
@@ -110,10 +107,7 @@ app.get("/check" , function(req,res)
         sess.userID = log_username;
         sess.email = log_emailid;
         sess.pass = log_password;
-        $("#uuuu").html("Username :- " + sess.userID);
-        $("#eeee").html("Email :- " + sess.email);
-        $("#pppp").html("Password :- " + sess.pass);
-        $("#temp").html("Succesfully Logged in !!");
+        $("#cred_user").html(sess.userID + ".");
 
         res.send($.html());
     }
@@ -129,6 +123,11 @@ app.get("/check" , function(req,res)
 
     console.log(present);
     present=0;
+})
+
+app.get("/guest" , function(req,res)
+{
+    res.sendFile(__dirname + "/main_page.html");
 })
 
 app.get("/logout" , function(req,res)
