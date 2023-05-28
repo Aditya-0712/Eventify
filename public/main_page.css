@@ -218,7 +218,7 @@ body
 .heading p 
 {
     display:flex;
-    font-size:18px;
+    font-size:25px;
     font-family: poppins-semibold;
     color:blueviolet;
     margin:auto auto auto 25px;
@@ -237,20 +237,15 @@ body
     display:flex;
     font-size: 17px;
     font-family: poppins-semibold;
-    color:white;
+    color:black;
     margin:0px auto 0px 25px;
-    position: relative;
-    bottom:60px;
-    background-color: rgba(0,0,0,0.15);
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
     border-radius: 5px;
     z-index: 1;
 }
 
 .event-desc
 {
-    color:rgba(255, 255, 255, 0.3);
+    color:rgba(0, 0, 0, 0.3);
     font-size: 12px;
     font-family: poppins-regular;
 }
@@ -277,10 +272,10 @@ body
     width:100%;
     margin:5px 0px 0px 0px;
     position: relative;
-    bottom: 90px;
+    bottom: 95px;
     background-color: white;
     border-radius: 0px 0px 50px 50px;
-    padding:50px 0px 15px 0px;
+    padding:95px 0px 15px 0px;
     z-index: 0;
 }
 
@@ -299,6 +294,7 @@ body
     width:100%;
     bottom:0;
     transform: translateY(60px);
+    z-index:3;
 }
 
 .notif-block div , .save-block div
@@ -322,7 +318,7 @@ body
     display:flex;
     font-size:25px;
     font-family: poppins-regular;
-    color: #3a3a3a;
+    color: white;
     margin:auto 10px auto auto;
 }
 
