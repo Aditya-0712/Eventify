@@ -104,6 +104,7 @@ body
     padding:10px 15px 10px 15px;
     border-radius: 5px;
     cursor: pointer;
+    user-select: none;
 }
 
 .next p 
@@ -243,6 +244,7 @@ body
         border-radius: 5px;
         background-color: blueviolet;
         cursor:pointer;
+        user-select: none;
     }
 
     .pc_next:hover 
