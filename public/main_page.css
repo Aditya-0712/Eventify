@@ -238,7 +238,7 @@ body
     font-size: 17px;
     font-family: poppins-semibold;
     color:black;
-    margin:0px auto 0px 25px;
+    margin:5px auto 0px 25px;
     border-radius: 5px;
     z-index: 1;
 }
@@ -247,6 +247,7 @@ body
 {
     color:rgba(0, 0, 0, 0.3);
     font-size: 12px;
+    margin-top: 0;
     font-family: poppins-regular;
 }
 
