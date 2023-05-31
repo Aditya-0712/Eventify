@@ -50,45 +50,49 @@
 
 <!-- _______________________________Code for Desktop Website starts here____________________________ -->
 
-    <div class="pc_main">
-        <div class="left">
-            <p>EVENTIFY</p>
-        </div>
-
-        <div class="right">
-            <p class="heading">Choose your role</p>
-            <p class="desc">Read the description and choose your role accordingly</p>
-
-            <div class="pc_options">
-                <div style="background-color:rgba(156,119,248,0.1); border:1px solid rgba(27,27,175); box-shadow: 0 4px 8px 0 rgba(137, 43, 226, 0.1), 0 6px 20px 0 rgba(137, 43, 226, 0.1)" onclick="pc_selectA()">
-                    <img src="/Pictures/student_logo.png" alt="student">
-                    <p>Student</p>
-                    <p>Browse, register and interact with events.</p>
-                </div>
-
-                <div onclick="pc_selectB()">
-                    <img src="/Pictures/guest_logo.png" alt="guest">
-                    <p>Guest</p>
-                    <p>Explore freely without login.</p>
-                </div>
-
-                <div onclick="pc_selectC()">
-                    <img src="/Pictures/admin_logo.png" alt="admin">
-                    <p>Admin</p>
-                    <p>Post and manage events hosted by you.</p>
-                </div>
+        <div class="pc_main">
+            <div class="left">
+                <p>EVENTIFY</p>
             </div>
 
-            <div class="pc_next" onclick="pc_redirect()">
-                <p>Next</p>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"/>
-                </svg>
+            <div class="right">
+                <p class="heading">Choose your role</p>
+                <p class="desc">Read the description and choose your role accordingly</p>
+
+                <div class="pc_options">
+                    <div style="background-color:rgba(156,119,248,0.1); border:1px solid rgba(27,27,175); box-shadow: 0 4px 8px 0 rgba(137, 43, 226, 0.1), 0 6px 20px 0 rgba(137, 43, 226, 0.1)" onclick="pc_selectA()">
+                        <img src="/Pictures/student_logo.png" alt="student">
+                        <p>Student</p>
+                        <p>Browse, register and interact with events.</p>
+                    </div>
+
+                    <div onclick="pc_selectB()">
+                        <img src="/Pictures/guest_logo.png" alt="guest">
+                        <p>Guest</p>
+                        <p>Explore freely without login.</p>
+                    </div>
+
+                    <div onclick="pc_selectC()">
+                        <img src="/Pictures/admin_logo.png" alt="admin">
+                        <p>Admin</p>
+                        <p>Post and manage events hosted by you.</p>
+                    </div>
+                </div>
+
+                <div class="pc_next" onclick="pc_redirect()">
+                    <p>Next</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"/>
+                    </svg>
+                </div>
             </div>
         </div>
-    </div>
 
 <!-- ___________________________________Code for Desktop version ends here_____________________________  -->
+
+        <div class="loading">
+            <div class="loader"></div>
+        </div>
 
         <script src="/index.js"></script>
     </body>
