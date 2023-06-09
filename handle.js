@@ -136,6 +136,11 @@ app.get("/logout" , function(req,res)
     res.redirect("/")
 })
 
+app.get("/admin.html" , function(req,res)
+{
+    res.sendFile(__dirname + "/admin.html");
+})
+
 app.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
   });
